@@ -10,6 +10,7 @@ import java.util.Arrays;
 
 public class Library {
     private Book[] availableBooks;
+
     public Library(Book[] availableBooks) {
         this.availableBooks = availableBooks;
     }
