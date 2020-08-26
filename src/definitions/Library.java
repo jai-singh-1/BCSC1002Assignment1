@@ -6,5 +6,23 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
-}
+    private Book[] availableBooks;
+
+    public Library(Book[] availableBooks) {
+        this.availableBooks = availableBooks;
+    }
+
+    public Book[] getAvailableBooks() {
+        return availableBooks;
+    }
+
+    public void setAvailableBooks(Book[] availableBooks){
+        this.availableBooks = availableBooks;
+    }
+
+
+    }
+
