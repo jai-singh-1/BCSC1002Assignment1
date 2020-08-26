@@ -14,4 +14,11 @@ public class Student {
     private long universityRollNumberOfTheStudent;
     private int numberOfBookIssuedByTheStudent;
     private Book[] nameOfTheBooksIssuedByTheStudent;
+
+    public Student(String nameOfTheStudent, long universityRollNumberOfTheStudent, int numberOfBookIssuedByTheStudent, Book[] nameOfTheBooksIssuedByTheStudent){
+        this.nameOfTheStudent = nameOfTheStudent;
+        this.universityRollNumberOfTheStudent = universityRollNumberOfTheStudent;
+        this.numberOfBookIssuedByTheStudent = numberOfBookIssuedByTheStudent;
+        this.nameOfTheBooksIssuedByTheStudent = nameOfTheBooksIssuedByTheStudent;
+    }
 }
