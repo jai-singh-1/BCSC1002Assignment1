@@ -50,4 +50,19 @@ public class Book {
                 ", thirteenDigitISBNNumberOfTheBook='" + getThirteenDigitISBNNumberOfTheBook() + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(getNameOfTheBook(), book.nameOfTheBook) &&
+                Objects.equals(getNameOfTheAuthorOfTheBook(), book.nameOfTheAuthorOfTheBook) &&
+                Objects.equals(getThirteenDigitISBNNumberOfTheBook(), book.thirteenDigitISBNNumberOfTheBook);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNameOfTheBook(), getNameOfTheAuthorOfTheBook(), getThirteenDigitISBNNumberOfTheBook());
+    }
 }
