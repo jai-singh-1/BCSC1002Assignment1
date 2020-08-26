@@ -23,6 +23,8 @@ public class Library {
         this.availableBooks = availableBooks;
     }
 
-
+    public String toString() {
+        return Arrays.toString(availableBooks);
     }
+}
 
