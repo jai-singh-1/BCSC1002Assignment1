@@ -53,4 +53,13 @@ public class Student {
     public void setNameOfTheBooksIssuedByTheStudent(Book[] nameOfTheBooksIssuedByTheStudent) {
         this.nameOfTheBooksIssuedByTheStudent = nameOfTheBooksIssuedByTheStudent;
     }
+
+    public String toString() {
+        return "Student{" +
+                "nameOfTheStudent='" + getNameOfTheStudent() + '\'' +
+                ", universityRollNumberOfTheStudent=" + getUniversityRollNumberOfTheStudent() +
+                ", numberOfBookIssuedByTheStudent=" + getNumberOfBookIssuedByTheStudent() +
+                ", nameOfTheBooksIssuedByTheStudent=" + Arrays.toString(getNameOfTheBooksIssuedByTheStudent()) +
+                '}';
+    }
 }
