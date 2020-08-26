@@ -6,5 +6,12 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
+    private String nameOfTheStudent;
+    private long universityRollNumberOfTheStudent;
+    private int numberOfBookIssuedByTheStudent;
+    private Book[] nameOfTheBooksIssuedByTheStudent;
 }
