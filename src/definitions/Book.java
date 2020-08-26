@@ -45,9 +45,9 @@ public class Book {
 
     public String toString() {
         return "Book{" +
-                "nameOfTheBook='" + nameOfTheBook + '\'' +
-                ", nameOfTheAuthorOfTheBook='" + nameOfTheAuthorOfTheBook + '\'' +
-                ", thirteenDigitISBNNumberOfTheBook='" + thirteenDigitISBNNumberOfTheBook + '\'' +
+                "nameOfTheBook='" + getNameOfTheBook() + '\'' +
+                ", nameOfTheAuthorOfTheBook='" + getNameOfTheAuthorOfTheBook() + '\'' +
+                ", thirteenDigitISBNNumberOfTheBook='" + getThirteenDigitISBNNumberOfTheBook() + '\'' +
                 '}';
     }
 }
