@@ -69,4 +69,22 @@ public class Student {
                 ", namesOfTheBooksIssued=" + Arrays.toString(namesOfTheBooksIssued) +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return universityRollNumber == student.universityRollNumber &&
+                numberOfBooksIssued == student.numberOfBooksIssued &&
+                Objects.equals(nameOfTheStudent, student.nameOfTheStudent) &&
+                Arrays.equals(namesOfTheBooksIssued, student.namesOfTheBooksIssued);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(nameOfTheStudent, universityRollNumber, numberOfBooksIssued);
+        result = 31 * result + Arrays.hashCode(namesOfTheBooksIssued);
+        return result;
+    }
 }
