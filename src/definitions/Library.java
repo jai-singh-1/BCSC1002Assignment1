@@ -10,6 +10,10 @@ import java.util.Arrays;
 
 public class Library {
     private Book[] currentlyAvailableBooks;
+
+    public Library(Book[] currentlyAvailableBooks) {
+        this.currentlyAvailableBooks = currentlyAvailableBooks;
+    }
 }
 
 
