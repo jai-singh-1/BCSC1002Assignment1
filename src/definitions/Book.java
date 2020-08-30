@@ -9,60 +9,7 @@ package definitions;
 import java.util.Objects;
 
 public class Book {
-    private String nameOfTheBook;
-    private String nameOfTheAuthorOfTheBook;
-    private String thirteenDigitISBNNumberOfTheBook;
-
-    public Book(String nameOfTheBook, String nameOfTheAuthorOfTheBook, String thirteenDigitISBNNumberOfTheBook) {
-        this.nameOfTheBook = nameOfTheBook;
-        this.nameOfTheAuthorOfTheBook = nameOfTheAuthorOfTheBook;
-        this.thirteenDigitISBNNumberOfTheBook = thirteenDigitISBNNumberOfTheBook;
-    }
-
-    public String getNameOfTheBook() {
-        return nameOfTheBook;
-    }
-
-    public void setNameOfTheBook(String nameOfTheBook) {
-        this.nameOfTheBook = nameOfTheBook;
-    }
-
-    public String getNameOfTheAuthorOfTheBook() {
-        return nameOfTheAuthorOfTheBook;
-    }
-
-    public void setNameOfTheAuthorOfTheBook(String nameOfTheAuthorOfTheBook) {
-        this.nameOfTheAuthorOfTheBook = nameOfTheAuthorOfTheBook;
-    }
-
-    public String getThirteenDigitISBNNumberOfTheBook() {
-        return thirteenDigitISBNNumberOfTheBook;
-    }
-
-    public void setThirteenDigitISBNNumberOfTheBook(String thirteenDigitISBNNumberOfTheBook) {
-        this.thirteenDigitISBNNumberOfTheBook = thirteenDigitISBNNumberOfTheBook;
-    }
-
-    public String toString() {
-        return "Book{" +
-                "nameOfTheBook='" + getNameOfTheBook() + '\'' +
-                ", nameOfTheAuthorOfTheBook='" + getNameOfTheAuthorOfTheBook() + '\'' +
-                ", thirteenDigitISBNNumberOfTheBook='" + getThirteenDigitISBNNumberOfTheBook() + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return Objects.equals(getNameOfTheBook(), book.nameOfTheBook) &&
-                Objects.equals(getNameOfTheAuthorOfTheBook(), book.nameOfTheAuthorOfTheBook) &&
-                Objects.equals(getThirteenDigitISBNNumberOfTheBook(), book.thirteenDigitISBNNumberOfTheBook);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getNameOfTheBook(), getNameOfTheAuthorOfTheBook(), getThirteenDigitISBNNumberOfTheBook());
-    }
+    private String bookName;
+    private String authorName;
+    private String ISBNNumber;
 }

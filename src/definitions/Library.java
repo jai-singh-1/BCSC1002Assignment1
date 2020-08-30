@@ -9,22 +9,33 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
-    private Book[] availableBooks;
+    private static final int MAXIMUM_BOOKS_IN_LIBRARY = 5;
+    private Book[] booksThatAreCurrentlyAvailable;
 
-    public Library(Book[] availableBooks) {
-        this.availableBooks = availableBooks;
+    // Parameterized Constructor
+    public Library(Book[] booksThatAreCurrentlyAvailable) {
+        this.booksThatAreCurrentlyAvailable = booksThatAreCurrentlyAvailable;
     }
 
-    public Book[] getAvailableBooks() {
-        return availableBooks;
+    // Non-Parameterized Constructor
+    public Library() {
+        this.booksThatAreCurrentlyAvailable = new Book[MAXIMUM_BOOKS_IN_LIBRARY];
+        for (int libraryIndex = 0; libraryIndex < MAXIMUM_BOOKS_IN_LIBRARY; libraryIndex++) {
+            this.booksThatAreCurrentlyAvailable[libraryIndex] = new Book();
+        }
     }
 
-    public void setAvailableBooks(Book[] availableBooks) {
-        this.availableBooks = availableBooks;
+    public Book[] getBooksThatAreCurrentlyAvailable() {
+        return booksThatAreCurrentlyAvailable;
     }
 
+    public void setBooksThatAreCurrentlyAvailable(Book[] booksThatAreCurrentlyAvailable) {
+        this.booksThatAreCurrentlyAvailable = booksThatAreCurrentlyAvailable;
+    }
+
+    @Override
     public String toString() {
-        return Arrays.toString(availableBooks);
+        return Arrays.toString(booksThatAreCurrentlyAvailable);
     }
 
     @Override
@@ -32,12 +43,46 @@ public class Library {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return Arrays.equals(availableBooks, library.availableBooks);
+        return Arrays.equals(getBooksThatAreCurrentlyAvailable(), library.getBooksThatAreCurrentlyAvailable());
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(availableBooks);
+        return Arrays.hashCode(getBooksThatAreCurrentlyAvailable());
+    }
+
+    /**
+     * This method will set the Information of books available in Library.
+     */
+    public void setBooksInLibrary() {
+        booksThatAreCurrentlyAvailable[0].setNameOfTheBook("Engineering Mathematics");
+        booksThatAreCurrentlyAvailable[0].setNameOfTheAuthorOfTheBook("H. K. Das");
+        booksThatAreCurrentlyAvailable[0].setThirteenDigitISBNNumberOfTheBook("9352836537000");
+        booksThatAreCurrentlyAvailable[1].setNameOfTheBook("Digital Electronics");
+        booksThatAreCurrentlyAvailable[1].setNameOfTheAuthorOfTheBook("M. Mano");
+        booksThatAreCurrentlyAvailable[1].setThirteenDigitISBNNumberOfTheBook("9353062012000");
+        booksThatAreCurrentlyAvailable[2].setNameOfTheBook("Database Management System");
+        booksThatAreCurrentlyAvailable[2].setNameOfTheAuthorOfTheBook("Navathe");
+        booksThatAreCurrentlyAvailable[2].setThirteenDigitISBNNumberOfTheBook("9789332582705");
+        booksThatAreCurrentlyAvailable[3].setNameOfTheBook("Fundamental of Software Engineering");
+        booksThatAreCurrentlyAvailable[3].setNameOfTheAuthorOfTheBook("Rajib Mall");
+        booksThatAreCurrentlyAvailable[3].setThirteenDigitISBNNumberOfTheBook("9789388028028");
+        booksThatAreCurrentlyAvailable[4].setNameOfTheBook("Core JAVA");
+        booksThatAreCurrentlyAvailable[4].setNameOfTheAuthorOfTheBook("Dr. R. Nageswara Rao");
+        booksThatAreCurrentlyAvailable[4].setThirteenDigitISBNNumberOfTheBook("9351199258111");
+    }
+
+    /**
+     * This method will show the Information of books available in Library.
+     */
+    public void showAvailableBooks() {
+        System.out.println("----------------------------------------------------------------------------------");
+        System.out.printf("|%-36s %-21s %-21s|\n", "Book Name", "Author Name", "13-Digit ISBN Number");
+        System.out.println("----------------------------------------------------------------------------------");
+        for (int libraryIndex = 0; libraryIndex < MAXIMUM_BOOKS_IN_LIBRARY; libraryIndex++) {
+            System.out.printf("|%-36s %-21s %-21s|\n", booksThatAreCurrentlyAvailable[libraryIndex].getNameOfTheBook(), booksThatAreCurrentlyAvailable[libraryIndex].getNameOfTheAuthorOfTheBook(), booksThatAreCurrentlyAvailable[libraryIndex].getThirteenDigitISBNNumberOfTheBook());
+        }
+        System.out.println("----------------------------------------------------------------------------------");
     }
 }
 
