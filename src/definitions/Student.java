@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
-    private String nameOfTheStudent;
+    private final String nameOfTheStudent;
     private long universityRollNumber;
     private int numberOfBooksIssued;
     private Book[] namesOfTheBooksIssued;
