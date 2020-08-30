@@ -59,4 +59,14 @@ public class Student {
             System.out.println(bookName);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "nameOfTheStudent='" + nameOfTheStudent + '\'' +
+                ", universityRollNumber=" + universityRollNumber +
+                ", numberOfBooksIssued=" + numberOfBooksIssued +
+                ", namesOfTheBooksIssued=" + Arrays.toString(namesOfTheBooksIssued) +
+                '}';
+    }
 }
