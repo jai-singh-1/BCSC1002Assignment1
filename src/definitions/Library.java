@@ -26,10 +26,12 @@ public class Library {
     public void setCurrentlyAvailableBooks(Book[] currentlyAvailableBooks) {
         this.currentlyAvailableBooks = currentlyAvailableBooks;
     }
+
     @Override
     public String toString() {
         return Arrays.toString(currentlyAvailableBooks);
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
